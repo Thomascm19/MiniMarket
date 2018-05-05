@@ -18,11 +18,10 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img src="~/Img/Logo.jpg" /></a>
+                <a class="brand-logo" href="@Url.Action("Index", "Home")"> <img src="~/Img/Logo.jpg" /> </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="badges.html">@Html.ActionLink("Registro De Usuarios!", "Create", "Clientes")</a></li>
-                    <li><a href="collapsible.html">@Html.ActionLink("Registro De Proveedores!", "Create", "Proveedors")</a></li>
-                    
+                    <li><a>@Html.ActionLink("Registro De Usuarios!", "Create", "Clientes")</a></li>
+                    <li><a>@Html.ActionLink("Registro De Proveedores!", "Create", "Proveedors")</a></li>
                 </ul>
             </div>
         </nav>
@@ -52,8 +51,8 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    © 2018 Copyright 
-                    
+                    © 2018 Copyright
+
                 </div>
             </div>
         </footer>

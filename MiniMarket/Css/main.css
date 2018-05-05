@@ -1,27 +1,112 @@
-﻿
+﻿body {
+
+    background-color: #F88F1F;
+}
+.row {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: table;
+}
+/*========================================
+Header
+=============================================*/
 .nav-wrapper {
     background-color: #3FD146;
 }
+
 .page-footer {
     padding-top: 20px;
     color: #fff;
     background-color: #3FD146;
 }
+
 header img {
+    float:left;
     height: 65px;
 }
+/*========================================
+Menu
+=============================================*/
 #icono1 {
     font-size: 218px;
+    color: #20A226;
 }
+
 #icono2 {
-    float:right;
-    position:relative;
-    right:-215px;
-    font-size: 218px;
-}
-#icono3 {
-    float: right;
     position: relative;
-    right: -100px;
     font-size: 218px;
+    color: #20A226;
+}
+
+#icono3 {
+    position: relative;
+    font-size: 218px;
+    color: #20A226;
+}
+
+.iconos {
+    text-align: center;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #999;
+    padding: 10%;
+    width: 325px;
+    height: 390px;
+    font-size: 40px;
+}
+
+#contenedor {
+    display: inline-block;
+    height: 480px;
+    text-align: center;
+}
+
+#caja2 {
+    position: relative;
+    right: -350px;
+    top: -390px;
+}
+
+
+#caja3 {
+    position: relative;
+    right: -700px;
+    top: -780px;
+}
+/*========================================
+Galeria
+=============================================*/
+#galeria {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#galeria ul {
+    padding: 10px;
+}
+
+#galeria ul li {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #999;
+        padding: 20px;
+        cursor: pointer;
+        transition: .6s;
+}
+
+#galeria ul li:hover {
+    transition: .6s;
+    opacity: .6;
+}
+
+#galeria ul li img {
+    width: 100%;
+    height:200px;
 }
