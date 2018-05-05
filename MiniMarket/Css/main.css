@@ -1,0 +1,13 @@
+﻿body {
+}
+.nav-wrapper {
+    background-color: #3FD146;
+}
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #3FD146;
+}
+header img {
+    height: 65px;
+}
