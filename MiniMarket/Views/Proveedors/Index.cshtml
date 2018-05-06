@@ -4,60 +4,114 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h4>Agregar Proveedores</h4>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ciudad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Contacto)
-        </th>
-        <th></th>
-    </tr>
+<div id="caja1">
+    <a href="@Url.Action("Create", "Proveedors")"><i id="agregar-proveedor" class="material-icons">person_add</i></a>
+</div>
+<div ng-app="proveedores" ng-controller="proveedorescontroller">
+    <div class="row">
+        <div class="col" s6>
+            <h2>Proveedores</h2>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Nit
+                </th>
+                <th>
+                    Ciudad
+                </th>
+                <th>
+                    Contacto
+                </th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nit)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ciudad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Contacto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Codigo_Proveedor }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Codigo_Proveedor }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Codigo_Proveedor })
-        </td>
-    </tr>
-}
+            <tr ng-repeat="proveedor in listaproveedores">
 
-</table>
+                <td>
+                    {{proveedor.Nombre}}
+                </td>
+                <td>
+                    {{proveedor.Telefono}}
+                </td>
+                <td>
+                    {{proveedor.Direccion}}
+                </td>
+                <td>
+                    {{proveedor.Nit}}
+                </td>
+                <td>
+                    {{proveedor.Ciudad}}
+                </td>
+                <td>
+                    {{proveedor.Contacto}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-------------------------------------------------
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ciudad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contacto)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contacto)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Codigo_Proveedor }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Codigo_Proveedor }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Codigo_Proveedor })
+                </td>
+            </tr>
+    }
+
+        </table>
+    -->

@@ -19,6 +19,16 @@ namespace MiniMarket.Controllers
         {
             return View(db.Proveedor.ToList());
         }
+        // Ajax
+        public String Listaproveedores()
+        {
+
+            var data = db.Proveedor;
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(data);
+
+            return json;
+        }
 
         // GET: Proveedors/Details/5
         public ActionResult Details(int? id)

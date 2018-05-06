@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Lista De Clientes</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div id="caja1">
+    <a href="@Url.Action("Create", "Clientes")"><i id="agregar-proveedor" class="material-icons">person_add</i></a>
+</div>
 <table class="table">
     <tr>
         <th>
