@@ -4,11 +4,65 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Lista De Clientes</h2>
+<h4>Lista De Clientes</h4>
 
 <div id="caja1">
     <a href="@Url.Action("Create", "Clientes")"><i id="agregar-proveedor" class="material-icons">person_add</i></a>
 </div>
+
+<div ng-app="clientes" ng-controller="clientescontroller">
+    <div class="row">
+        <div class="col" s6>
+            <h2>Clientes</h2>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Cedula
+                </th>
+                <th>
+                    Ciudad
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Telefono
+                </th>
+            </tr>
+
+            <tr ng-repeat="cliente in listaclientes">
+
+                <td>
+                    {{cliente.Nombre}}
+                </td>
+                <td>
+                    {{cliente.Direccion}}
+                </td>
+                <td>
+                    {{cliente.Cedula}}
+                </td>
+                <td>
+                    {{cliente.Ciudad}}
+                </td>
+                <td>
+                    {{cliente.Email}}
+                </td>
+                <td>
+                    {{cliente.Telefono}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-------------------------------------------------
 <table class="table">
     <tr>
         <th>
@@ -61,3 +115,4 @@
 }
 
 </table>
+        -->
