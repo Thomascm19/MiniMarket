@@ -100,7 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\font-awesome.min.css" />
     <Content Include="Css\main.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Img\img1.jpeg" />
@@ -116,6 +118,10 @@
     <Content Include="Img\img8.jpg" />
     <Content Include="Img\img9.jpg" />
     <Content Include="Img\Logo.jpg" />
+    <Content Include="Img\slide01.jpg" />
+    <Content Include="Img\slide02.jpg" />
+    <Content Include="Img\slide03.jpg" />
+    <Content Include="Img\slide04.jpg" />
     <Content Include="Materialize\css\materialize.css" />
     <Content Include="Materialize\css\materialize.min.css" />
     <Content Include="Materialize\js\materialize.js" />
@@ -145,6 +151,11 @@
     <Content Include="Materialize\fonts\roboto\Roboto-Thin.woff2" />
     <Content Include="Materialize\LICENSE" />
     <Content Include="Materialize\README.md" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular.js" />
@@ -159,6 +170,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\slide.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Compras\Create.cshtml" />
     <Content Include="Views\Compras\Delete.cshtml" />
