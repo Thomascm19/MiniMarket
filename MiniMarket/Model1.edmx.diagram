@@ -15,7 +15,7 @@
         <AssociationConnector Association="minimarketModel.FK_Stock_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="minimarketModel.FK_Venta_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="minimarketModel.FK_Compra_Producto" ManuallyRouted="false" />
-        <AssociationConnector Association="minimarketModel.FK_Compra_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="minimarketModel.FK_Compra_Proveedor" />
         <AssociationConnector Association="minimarketModel.FK_Stock_Producto" ManuallyRouted="false" />
         <AssociationConnector Association="minimarketModel.FK_Venta_Venta" ManuallyRouted="false" />
         <AssociationConnector Association="minimarketModel.FK_Stock_Proveedor" ManuallyRouted="false" />

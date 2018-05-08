@@ -35,62 +35,9 @@
                 </th>
             </tr>
             @foreach (var item in Model)
-        {
-            <tr ng-repeat="producto in listaproductos">
+            {
+                <tr ng-repeat="producto in listaproductos">
 
-                <td>
-                    {{producto.Nombre}}
-                </td>
-                <td>
-                    {{producto.Precio_Venta}}
-                </td>
-                <td>
-                    {{producto.Descripcion}}
-                </td>
-                <td>
-                    {{producto.Precio_Compra}}
-                </td>
-                <td>
-                    {{producto.Fecha_Vencimiento}}
-                </td>
-                <td>
-                    {{producto.Garantia}}
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Producto }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Producto }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Producto })
-                </td>
-            </tr>
-    }
-        </table>
-        <h4>Zona de busqueda</h4>
-        <div class="input-field col s9">
-            <input type="text" dirname="filtro" id="filtro" ng-model="text" />
-            <label>Buscar proveedor</label>
-
-            <table class="table">
-                <tr>
-                    <th>
-                        Nombre
-                    </th>
-                    <th>
-                        Precio de Venta
-                    </th>
-                    <th>
-                        Descripcion
-                    </th>
-                    <th>
-                        Precio de Compra
-                    </th>
-                    <th>
-                        Fecha de Vencimiento
-                    </th>
-                    <th>
-                        Garantia
-                    </th>
-                </tr>
-                <tr ng-repeat="producto in listaproductos  | filter:text">
                     <td>
                         {{producto.Nombre}}
                     </td>
@@ -109,13 +56,68 @@
                     <td>
                         {{producto.Garantia}}
                     </td>
-
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Producto }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Producto }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Producto })
+                    </td>
                 </tr>
-
-
-            </table>
-        </div>
+            }
+        </table>
     </div>
+    <h4>Zona de busqueda</h4>
+    <div class="input-field col s9">
+        <input type="text" dirname="filtro" id="filtro" ng-model="text" />
+        <label>Buscar proveedor</label>
+
+        <table class="table">
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Precio de Venta
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Precio de Compra
+                </th>
+                <th>
+                    Fecha de Vencimiento
+                </th>
+                <th>
+                    Garantia
+                </th>
+            </tr>
+            <tr ng-repeat="producto in listaproductos  | filter:text">
+                <td>
+                    {{producto.Nombre}}
+                </td>
+                <td>
+                    {{producto.Precio_Venta}}
+                </td>
+                <td>
+                    {{producto.Descripcion}}
+                </td>
+                <td>
+                    {{producto.Precio_Compra}}
+                </td>
+                <td>
+                    {{producto.Fecha_Vencimiento}}
+                </td>
+                <td>
+                    {{producto.Garantia}}
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+</div>
 <!--
 <table class="table">
     <tr>
@@ -179,29 +181,18 @@
     <h2>Productos</h2>
     <hr />
     <ul>
-        <li class="col l3 s12"><img src="~/Img/img1.jpeg"></li>
-        <li class="col l3 s12"><img src="~/Img/img2.jpg"></li>
-        <li class="col l3 s12"><img src="~/Img/img3.jpg"></li>
-        <li class="col l3 s12"><img src="~/Img/img4.jpeg"></li>
-        <li class="col l3 s12"><img src="~/Img/img5.jpg"></li>
-        <li class="col l3 s12"><img src="~/Img/img6.png"></li>
-        <li class="col l3 s12"><img src="~/Img/img7.jpg"></li>
-        <li class="col l3 s12"><img src="~/Img/img8.jpg"></li>
-        <li class="col l3 s12"><img src="~/Img/img9.jpg"></li>
-        <li class="col l3 s12"><img src="~/Img/img10.jpeg"></li>
-        <li class="col l3 s12"><img src="~/Img/img11.jpeg"></li>
-        <li class="col l3 s12"><img src="~/Img/img12.png"></li>
+
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img1.jpeg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img2.jpg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img3.jpg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img4.jpeg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img5.jpg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img6.png"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img7.jpg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img8.jpg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img9.jpg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img10.jpeg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img11.jpeg"></li></a>
+        <a href="@Url.Action("Create", "Compras")"><li class="col l3 s12"><img src="~/Img/img12.png"></li></a>
     </ul>
 </div>
-
-<center>
-    <div id="contenedor" class="row">
-        <div id="cajas" class="col l3 s12">
-
-            <div id="caja5" class="iconos">
-                <a href="@Url.Action("Create", "Compras")"><i id="icono3" class="material-icons">add_shopping_cart</i></a>
-                <h2>Compra!</h2>
-            </div>
-        </div>
-    </div>
-</center>
