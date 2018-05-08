@@ -10,8 +10,8 @@
 <body>
     <div class="content-fluid">
         <!--=====================================
-                SLIDESHOW
-    ======================================-->
+                    SLIDESHOW
+        ======================================-->
 
         <div id="slide" class="row">
 
@@ -67,47 +67,31 @@
 
 
     </div>
-        <!--Menus-->
-        <div id="contenedor" class="row">
-            <h2>MiniMarket</h2>
-            <div class="col l3 s12">
-                <div id="caja1" class="iconos">
-                    <a href="@Url.Action("Index", "Clientes")"><i id="icono1" class="material-icons">account_circle</i></a>
-                    <h2>Clientes</h2>
-                </div>
-                <div id="caja2" class="iconos">
-                    <a href="@Url.Action("Index", "Proveedors")"><i id="icono2" class="material-icons">local_shipping</i></a>
-                    <h2>Proveedores</h2>
-                </div>
-                <div id="caja3" class="iconos">
-                    <a href="@Url.Action("Index", "Stocks")"><i id="icono3" class="material-icons">add_shopping_cart</i></a>
-                    <h2>Stock</h2>
-                </div>
+    <!--Menus-->
+    <div id="contenedor" class="row">
+        <h2>MiniMarket</h2>
+        <div id="cajas" class="col l3 s12">
+            <div id="caja1" class="iconos">
+                <a href="@Url.Action("Index", "Clientes")"><i id="icono1" class="material-icons">account_circle</i></a>
+                <h2>Clientes</h2>
+            </div>
+            <div id="caja2" class="iconos">
+                <a href="@Url.Action("Index", "Proveedors")"><i id="icono2" class="material-icons">local_shipping</i></a>
+                <h2>Proveedores</h2>
+            </div>
+            <div id="caja3" class="iconos">
+                <a href="@Url.Action("Index", "Stocks")"><i id="icono3" class="material-icons">add_shopping_cart</i></a>
+                <h2>Stock</h2>
+            </div>
+            <div id="caja4" class="iconos">
+                <a href="@Url.Action("Index", "Productoes")"><i id="icono3" class="material-icons">add_shopping_cart</i></a>
+                <h2>Productos</h2>
             </div>
         </div>
+    </div>
 
-        <!--=====================================
-        GALERIA
-        ======================================-->
-        <hr />
-        <div id="galeria" class="row">
-            <h2>Productos</h2>
-            <hr />
-            <ul>
-                <li class="col l3 s12"><img src="~/Img/img1.jpeg"></li>
-                <li class="col l3 s12"><img src="~/Img/img2.jpg"></li>
-                <li class="col l3 s12"><img src="~/Img/img3.jpg"></li>
-                <li class="col l3 s12"><img src="~/Img/img4.jpeg"></li>
-                <li class="col l3 s12"><img src="~/Img/img5.jpg"></li>
-                <li class="col l3 s12"><img src="~/Img/img6.png"></li>
-                <li class="col l3 s12"><img src="~/Img/img7.jpg"></li>
-                <li class="col l3 s12"><img src="~/Img/img8.jpg"></li>
-                <li class="col l3 s12"><img src="~/Img/img9.jpg"></li>
-                <li class="col l3 s12"><img src="~/Img/img10.jpeg"></li>
-                <li class="col l3 s12"><img src="~/Img/img11.jpeg"></li>
-                <li class="col l3 s12"><img src="~/Img/img12.png"></li>
-            </ul>
-        </div>
+    
+
 
 </body>
 </html>

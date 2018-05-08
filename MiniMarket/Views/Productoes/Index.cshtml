@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Productos</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -32,32 +32,55 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Precio_Venta)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Precio_Compra)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fecha_Vencimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Garantia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Codigo_Producto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Codigo_Producto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Codigo_Producto })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio_Venta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio_Compra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Vencimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Garantia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Codigo_Producto }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Codigo_Producto }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Codigo_Producto })
+            </td>
+        </tr>
+    }
 
 </table>
+<!--=====================================
+       GALERIA
+       ======================================-->
+<hr />
+<div id="galeria" class="row">
+    <h2>Productos</h2>
+    <hr />
+    <ul>
+        <li class="col l3 s12"><img src="~/Img/img1.jpeg"></li>
+        <li class="col l3 s12"><img src="~/Img/img2.jpg"></li>
+        <li class="col l3 s12"><img src="~/Img/img3.jpg"></li>
+        <li class="col l3 s12"><img src="~/Img/img4.jpeg"></li>
+        <li class="col l3 s12"><img src="~/Img/img5.jpg"></li>
+        <li class="col l3 s12"><img src="~/Img/img6.png"></li>
+        <li class="col l3 s12"><img src="~/Img/img7.jpg"></li>
+        <li class="col l3 s12"><img src="~/Img/img8.jpg"></li>
+        <li class="col l3 s12"><img src="~/Img/img9.jpg"></li>
+        <li class="col l3 s12"><img src="~/Img/img10.jpeg"></li>
+        <li class="col l3 s12"><img src="~/Img/img11.jpeg"></li>
+        <li class="col l3 s12"><img src="~/Img/img12.png"></li>
+    </ul>
+</div>

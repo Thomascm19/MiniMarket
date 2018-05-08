@@ -1,6 +1,7 @@
 ﻿body {
 
     background-color: #F88F1F;
+   height:
 }
 .row {
     position: relative;
@@ -27,6 +28,8 @@ Header
     padding-top: 20px;
     color: #fff;
     background-color: #3FD146;
+    position: relative;
+    top: 450px
 }
 
 header img {
@@ -36,6 +39,9 @@ header img {
 /*========================================
 Menu
 =============================================*/
+#cajas {
+    height: 390px;
+}
 #icono1 {
     font-size: 218px;
     color: #20A226;
@@ -83,6 +89,11 @@ Menu
     position: relative;
     right: -700px;
     top: -780px;
+}
+#caja4 {
+    position: relative;
+    top: -740px;
+    right:-350px;
 }
 /*========================================
 Galeria
