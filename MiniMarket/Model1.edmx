@@ -230,7 +230,7 @@
             <PropertyRef Name="Codigo_Proveedor" />
             <PropertyRef Name="Codigo_Producto" />
           </Key>
-          <Property Name="Codigo_Proveedor" Type="Int32" Nullable="false" />
+          <Property Name="Codigo_Proveedor" Nullable="false" Type="Int32" />
           <Property Name="Codigo_Producto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Precio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Fecha" Type="DateTime" Precision="0" />
@@ -342,8 +342,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Compra_Proveedor">
-          <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
-          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+          <End Type="Self.Proveedor" Multiplicity="1" Role="Proveedor" />
+          <End Type="Self.Compra" Multiplicity="*" Role="Compra" />
           <ReferentialConstraint>
             <Principal Role="Proveedor">
               <PropertyRef Name="Codigo_Proveedor" />
@@ -410,8 +410,8 @@
             <End Role="Compra" EntitySet="Compra" />
           </AssociationSet>
           <AssociationSet Name="FK_Compra_Proveedor" Association="Self.FK_Compra_Proveedor">
-            <End Role="Proveedor" EntitySet="Proveedor" />
-            <End Role="Compra" EntitySet="Compra" />
+            <End EntitySet="Proveedor" Role="Proveedor" />
+            <End EntitySet="Compra" Role="Compra" />
           </AssociationSet>
           <AssociationSet Name="FK_Stock_Producto" Association="Self.FK_Stock_Producto">
             <End Role="Producto" EntitySet="Producto" />

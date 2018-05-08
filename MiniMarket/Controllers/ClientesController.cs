@@ -30,6 +30,17 @@ namespace MiniMarket.Controllers
             return json;
         }
 
+        // Ajax
+        public String Listaclientes()
+        {
+
+            var data = db.Cliente;
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(data);
+
+            return json;
+        }
+
         // GET: Clientes/Details/5
         public ActionResult Details(int? id)
         {

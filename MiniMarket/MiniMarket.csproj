@@ -100,7 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\font-awesome.min.css" />
     <Content Include="Css\main.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Img\img1.jpeg" />
@@ -116,10 +118,14 @@
     <Content Include="Img\img8.jpg" />
     <Content Include="Img\img9.jpg" />
     <Content Include="Img\Logo.jpg" />
-    <Content Include="Materialize\css\materialize.css" />
-    <Content Include="Materialize\css\materialize.min.css" />
-    <Content Include="Materialize\js\materialize.js" />
-    <Content Include="Materialize\js\materialize.min.js" />
+    <Content Include="Img\slide01.jpg" />
+    <Content Include="Img\slide02.jpg" />
+    <Content Include="Img\slide03.jpg" />
+    <Content Include="Img\slide04.jpg" />
+    <Content Include="materialize-v1\materialize\css\materialize.css" />
+    <Content Include="materialize-v1\materialize\css\materialize.min.css" />
+    <Content Include="materialize-v1\materialize\js\materialize.js" />
+    <Content Include="materialize-v1\materialize\js\materialize.min.js" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -133,22 +139,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Bold.woff" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Bold.woff2" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Light.woff" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Light.woff2" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Medium.woff" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Medium.woff2" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Regular.woff" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Regular.woff2" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Thin.woff" />
-    <Content Include="Materialize\fonts\roboto\Roboto-Thin.woff2" />
-    <Content Include="Materialize\LICENSE" />
-    <Content Include="Materialize\README.md" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="materialize-v1\materialize\LICENSE" />
+    <Content Include="materialize-v1\materialize\README.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\calendario.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -159,6 +161,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\slide.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Compras\Create.cshtml" />
     <Content Include="Views\Compras\Delete.cshtml" />
@@ -185,11 +188,6 @@
     <Content Include="Views\Stocks\Details.cshtml" />
     <Content Include="Views\Stocks\Edit.cshtml" />
     <Content Include="Views\Stocks\Index.cshtml" />
-    <Content Include="Views\Ventas\Create.cshtml" />
-    <Content Include="Views\Ventas\Delete.cshtml" />
-    <Content Include="Views\Ventas\Details.cshtml" />
-    <Content Include="Views\Ventas\Edit.cshtml" />
-    <Content Include="Views\Ventas\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -207,7 +205,6 @@
     <Compile Include="Controllers\ProductoesController.cs" />
     <Compile Include="Controllers\ProveedorsController.cs" />
     <Compile Include="Controllers\StocksController.cs" />
-    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,6 +267,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="materialize-v1\materialize\fonts\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

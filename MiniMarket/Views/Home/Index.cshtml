@@ -8,12 +8,69 @@
     <title>MiniMarket</title>
 </head>
 <body>
+    <div class="content-fluid">
+        <!--=====================================
+                    SLIDESHOW
+        ======================================-->
+
+        <div id="slide" class="row">
+
+            <ul>
+
+                <li>
+                    <img src="~/Img/slide2.jpg">
+                    <div class="textoSlide">
+                        <h1>Cerveza Heineken</h1>
+                        <h3>Por tan solo $3.000!</h3>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="~/Img/slide1.jpg">
+                    <div class="textoSlide">
+                        <h1>Cerveza Stella Artois</h1>
+                        <h3>A tan solo $3.500!</h3>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="~/Img/slide3.jpg">
+                    <div class="textoSlide">
+                        <h1>Cerveza Club Colombia</h1>
+                        <h3>Por tan solo $2.500!</h3>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/slide4.jpg">
+                    <div class="textoSlide">
+                        <h1>Cerveza Corona</h1>
+                        <h3>A tan solo $4.000!</h3>
+                    </div>
+                </li>
+
+            </ul>
+
+            <ol id="paginacion">
+
+                <li item="1"><span class="fa fa-circle"></span></li>
+                <li item="2"><span class="fa fa-circle"></span></li>
+                <li item="3"><span class="fa fa-circle"></span></li>
+                <li item="4"><span class="fa fa-circle"></span></li>
+
+            </ol>
+
+            <div class="flechas" id="retroceder"><span class="fa fa-chevron-left"></span></div>
+            <div class="flechas" id="avanzar"><span class="fa fa-chevron-right"></span></div>
+
+        </div>
 
 
+    </div>
     <!--Menus-->
     <div id="contenedor" class="row">
         <h2>MiniMarket</h2>
-        <div class="col l3 s12">
+        <div id="cajas" class="col l3 s12">
             <div id="caja1" class="iconos">
                 <a href="@Url.Action("Index", "Clientes")"><i id="icono1" class="material-icons">account_circle</i></a>
                 <h2>Clientes</h2>
@@ -26,31 +83,15 @@
                 <a href="@Url.Action("Index", "Stocks")"><i id="icono3" class="material-icons">add_shopping_cart</i></a>
                 <h2>Stock</h2>
             </div>
+            <div id="caja4" class="iconos">
+                <a href="@Url.Action("Index", "Productoes")"><i id="icono3" class="material-icons">poll</i></a>
+                <h2>Productos</h2>
+            </div>
         </div>
     </div>
 
-    <!--=====================================
-    GALERIA
-    ======================================-->
-    <hr />
-    <div id="galeria" class="row">
-        <h2>Productos</h2>
-        <hr />
-        <ul>
-            <li class="col l3 s12"><img src="~/Img/img1.jpeg"></li>
-            <li class="col l3 s12"><img src="~/Img/img2.jpg"></li>
-            <li class="col l3 s12"><img src="~/Img/img3.jpg"></li>
-            <li class="col l3 s12"><img src="~/Img/img4.jpeg"></li>
-            <li class="col l3 s12"><img src="~/Img/img5.jpg"></li>
-            <li class="col l3 s12"><img src="~/Img/img6.png"></li>
-            <li class="col l3 s12"><img src="~/Img/img7.jpg"></li>
-            <li class="col l3 s12"><img src="~/Img/img8.jpg"></li>
-            <li class="col l3 s12"><img src="~/Img/img9.jpg"></li>
-            <li class="col l3 s12"><img src="~/Img/img10.jpeg"></li>
-            <li class="col l3 s12"><img src="~/Img/img11.jpeg"></li>
-            <li class="col l3 s12"><img src="~/Img/img12.png"></li>
-        </ul>
-    </div>
+    
+
 
 </body>
 </html>

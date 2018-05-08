@@ -17,7 +17,7 @@ namespace MiniMarket.Controllers
         // GET: Compras
         public ActionResult Index()
         {
-            var compra = db.Compra.Include(c => c.Producto).Include(c => c.Proveedor);
+            var compra = db.Compra.Include(c => c.Producto);
             return View(compra.ToList());
         }
 
