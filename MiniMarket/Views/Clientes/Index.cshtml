@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h4>Lista De Clientes</h4>
+<h4>Agregar clientes</h4>
 
 <div id="caja1">
     <a href="@Url.Action("Create", "Clientes")"><i id="agregar-proveedor" class="material-icons">person_add</i></a>
@@ -14,7 +14,9 @@
     <div class="row">
         <div class="col" s6>
             <h2>Clientes</h2>
+
         </div>
+
 
         <table class="table">
             <tr>
@@ -38,35 +40,87 @@
                 </th>
             </tr>
             @foreach (var item in Model)
-        {
-            <tr ng-repeat="cliente in listaclientes">
+            {
+                <tr ng-repeat="cliente in listaclientes">
 
-                <td>
-                    {{cliente.Nombre}}
-                </td>
-                <td>
-                    {{cliente.Direccion}}
-                </td>
-                <td>
-                    {{cliente.Cedula}}
-                </td>
-                <td>
-                    {{cliente.Ciudad}}
-                </td>
-                <td>
-                    {{cliente.Email}}
-                </td>
-                <td>
-                    {{cliente.Telefono}}
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Cliente }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Cliente }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Cliente })
-                </td>
-            </tr>
-    }
+                    <td>
+                        {{cliente.Nombre}}
+                    </td>
+                    <td>
+                        {{cliente.Direccion}}
+                    </td>
+                    <td>
+                        {{cliente.Cedula}}
+                    </td>
+                    <td>
+                        {{cliente.Ciudad}}
+                    </td>
+                    <td>
+                        {{cliente.Email}}
+                    </td>
+                    <td>
+                        {{cliente.Telefono}}
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Cliente }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Cliente }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Cliente })
+                    </td>
+                </tr>
+            }
         </table>
+        <h4>Zona de busqueda</h4>
+        <div class="input-field col s9">
+            <input type="text" dirname="filtro" id="filtro" ng-model="text" />
+            <label>Buscar cliente</label>
+
+            <table class="table">
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Direccion
+                    </th>
+                    <th>
+                        Cedula
+                    </th>
+                    <th>
+                        Ciudad
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Telefono
+                    </th>
+                </tr>
+                <tr ng-repeat="cliente in listaclientes  | filter:text">
+                    <td>
+                        {{cliente.Nombre}}
+                    </td>
+                    <td>
+                        {{cliente.Direccion}}
+                    </td>
+                    <td>
+                        {{cliente.Cedula}}
+                    </td>
+                    <td>
+                        {{cliente.Ciudad}}
+                    </td>
+                    <td>
+                        {{cliente.Email}}
+                    </td>
+                    <td>
+                        {{cliente.Telefono}}
+                    </td>
+
+                </tr>
+
+
+            </table>
+
+        </div>
     </div>
 </div>
 

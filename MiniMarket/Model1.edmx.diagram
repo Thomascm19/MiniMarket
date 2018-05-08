@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6fb1075c90124482820577b719100dca" Name="Diagram1">
-        <EntityTypeShape EntityType="minimarketModel.Cliente" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="minimarketModel.Compra" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="minimarketModel.Informacion" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="6fb1075c90124482820577b719100dca" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="minimarketModel.Cliente" Width="1.5" PointX="3.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="minimarketModel.Compra" Width="1.5" PointX="3.875" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="minimarketModel.Informacion" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="minimarketModel.Producto" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="minimarketModel.Proveedor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="minimarketModel.Stock" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="minimarketModel.Venta" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="minimarketModel.Proveedor" Width="1.5" PointX="9.875" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="minimarketModel.Stock" Width="1.5" PointX="6.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="minimarketModel.Venta" Width="1.5" PointX="1" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="minimarketModel.FK_Stock_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="minimarketModel.FK_Venta_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="minimarketModel.FK_Compra_Producto" ManuallyRouted="false" />

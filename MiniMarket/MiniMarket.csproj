@@ -188,11 +188,6 @@
     <Content Include="Views\Stocks\Details.cshtml" />
     <Content Include="Views\Stocks\Edit.cshtml" />
     <Content Include="Views\Stocks\Index.cshtml" />
-    <Content Include="Views\Ventas\Create.cshtml" />
-    <Content Include="Views\Ventas\Delete.cshtml" />
-    <Content Include="Views\Ventas\Details.cshtml" />
-    <Content Include="Views\Ventas\Edit.cshtml" />
-    <Content Include="Views\Ventas\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +205,6 @@
     <Compile Include="Controllers\ProductoesController.cs" />
     <Compile Include="Controllers\ProveedorsController.cs" />
     <Compile Include="Controllers\StocksController.cs" />
-    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

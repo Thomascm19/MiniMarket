@@ -36,7 +36,7 @@
                 </th>
             </tr>
             @foreach (var item in Model)
-            {
+        {
             <tr ng-repeat="proveedor in listaproveedores">
 
                 <td>
@@ -63,10 +63,60 @@
                     @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Proveedor })
                 </td>
             </tr>
-            }
+    }
         </table>
+        <h4>Zona de busqueda</h4>
+        <div class="input-field col s9">
+            <input type="text" dirname="filtro" id="filtro" ng-model="text" />
+            <label>Buscar proveedor</label>
+
+            <table class="table">
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Telefono
+                    </th>
+                    <th>
+                        Direccion
+                    </th>
+                    <th>
+                        Nit                        
+                    </th>
+                    <th>
+                        Ciudad
+                    </th>
+                    <th>
+                        Contacto
+                    </th>
+                </tr>
+                <tr ng-repeat="poveedor in listaproveedores  | filter:text">
+                    <td>
+                        {{poveedor.Nombre}}
+                    </td>
+                    <td>
+                        {{poveedor.Telefono}}
+                    </td>
+                    <td>
+                        {{poveedor.Direccion}}
+                    </td>
+                    <td>
+                        {{poveedor.Nit}}
+                    </td>
+                    <td>
+                        {{poveedor.Ciudad}}
+                    </td>
+                    <td>
+                        {{poveedor.Contacto}}
+                    </td>
+
+                </tr>
+
+
+            </table>
+        </div>
     </div>
-</div>
 <!-------------------------------------------------
         <table class="table">
             <tr>

@@ -35,7 +35,7 @@
                 </th>
             </tr>
             @foreach (var item in Model)
-            {
+        {
             <tr ng-repeat="producto in listaproductos">
 
                 <td>
@@ -62,10 +62,60 @@
                     @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Producto })
                 </td>
             </tr>
-            }
+    }
         </table>
+        <h4>Zona de busqueda</h4>
+        <div class="input-field col s9">
+            <input type="text" dirname="filtro" id="filtro" ng-model="text" />
+            <label>Buscar proveedor</label>
+
+            <table class="table">
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Precio de Venta
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th>
+                        Precio de Compra
+                    </th>
+                    <th>
+                        Fecha de Vencimiento
+                    </th>
+                    <th>
+                        Garantia
+                    </th>
+                </tr>
+                <tr ng-repeat="producto in listaproductos  | filter:text">
+                    <td>
+                        {{producto.Nombre}}
+                    </td>
+                    <td>
+                        {{producto.Precio_Venta}}
+                    </td>
+                    <td>
+                        {{producto.Descripcion}}
+                    </td>
+                    <td>
+                        {{producto.Precio_Compra}}
+                    </td>
+                    <td>
+                        {{producto.Fecha_Vencimiento}}
+                    </td>
+                    <td>
+                        {{producto.Garantia}}
+                    </td>
+
+                </tr>
+
+
+            </table>
+        </div>
     </div>
-</div>
 <!--
 <table class="table">
     <tr>

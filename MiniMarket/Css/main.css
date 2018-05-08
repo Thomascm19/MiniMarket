@@ -146,6 +146,9 @@ Seccion de proveedores
 
 #agregar-proveedor {
     font-size: 88px;
+    position: relative;
+    right: -200px;
+    color: #20A226;
 }
 /*=============================================
 SLIDESHOW
