@@ -1,4 +1,4 @@
-﻿/* Datos Proveedores   */
+﻿ /* Datos proveedores   */
 var proveedores = angular.module('proveedores', ["ngSanitize"]);
 
 proveedores.factory("listaproveedores", function ($http) {
@@ -15,7 +15,7 @@ proveedores.controller("proveedorescontroller", function ($scope, listaproveedor
 
     }); 
 });
-/* Datos Clientes   */
+ /* Datos Clientes   */
 var clientes = angular.module('clientes', ["ngSanitize"]);
 
 clientes.factory("listaclientes", function ($http) {
@@ -29,23 +29,6 @@ clientes.factory("listaclientes", function ($http) {
 clientes.controller("clientescontroller", function ($scope, listaclientes) {
     listaclientes.listaclientes().success(function (datos) {
         $scope.listaclientes = datos
-
-    });
-});
-/* Datos Clientes   */
-var productos = angular.module('productos', ["ngSanitize"]);
-
-productos.factory("listaproductos", function ($http) {
-    var factoria = {};
-    factoria.listaproductos = function () {
-        return $http.get("http://localhost:61093/productoes/listaproductos");
-    }
-    return factoria; listaproductos
-});
-
-productos.controller("productoscontroller", function ($scope, listaproductos) {
-    listaproductos.listaproductos().success(function (datos) {
-        $scope.listaproductos = datos
 
     });
 });
