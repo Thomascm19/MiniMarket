@@ -9,6 +9,7 @@
 
 namespace MiniMarket
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -33,5 +34,8 @@ namespace MiniMarket
         public virtual ICollection<Stock> Stock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Venta { get; set; }
+
+        [JsonIgnore]
+        public virtual Cliente cliente { get; set; }
     }
 }
