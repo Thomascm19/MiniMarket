@@ -79,26 +79,26 @@ Menu
 }
 #caja1 {
     position: relative;
-    right: 180px;
+    right: 200px;
     
 }
 
 #caja2 {
     position: relative;
-    right: -150px;
+    right: -135px;
     top: -390px;
 }
 
 
 #caja3 {
     position: relative;
-    right: -480px;
+    right: -470px;
     top: -780px;
 }
 #caja4 {
     position: relative;
     top: -1170px;
-    right:-810px;
+    right:-800px;
 }
 #caja5 {
     top: 10px;
