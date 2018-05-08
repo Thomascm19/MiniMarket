@@ -1,7 +1,7 @@
 ﻿body {
 
     background-color: #F88F1F;
-   height:
+   
 }
 .row {
     position: relative;
@@ -17,6 +17,7 @@
     width: 100%;
     height: auto;
 }
+
 /*========================================
 Header
 =============================================*/
@@ -28,8 +29,7 @@ Header
     padding-top: 20px;
     color: #fff;
     background-color: #3FD146;
-    position: relative;
-    top: 450px
+
 }
 
 header img {
@@ -77,23 +77,28 @@ Menu
     text-align: center;
     font-family: 'Skranji', cursive;
 }
+#caja1 {
+    position: relative;
+    right: 180px;
+    
+}
 
 #caja2 {
     position: relative;
-    right: -350px;
+    right: -150px;
     top: -390px;
 }
 
 
 #caja3 {
     position: relative;
-    right: -700px;
+    right: -480px;
     top: -780px;
 }
 #caja4 {
     position: relative;
-    top: -740px;
-    right:-350px;
+    top: -1170px;
+    right:-810px;
 }
 /*========================================
 Galeria

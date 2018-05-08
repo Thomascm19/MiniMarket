@@ -3,12 +3,70 @@
 @{
     ViewBag.Title = "Index";
 }
+<h4>Agregar Productos</h4>
+<div id="caja1">
+    <a href="@Url.Action("Create", "Productoes")"><i id="agregar-proveedor" class="material-icons">person_add</i></a>
+</div>
 
-<h2>Productos</h2>
+<div ng-app="productos" ng-controller="productoscontroller">
+    <div class="row">
+        <div class="col" s6>
+            <h2>Productos</h2>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Precio de Venta
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Precio de Compra
+                </th>
+                <th>
+                    Fecha de Vencimiento
+                </th>
+                <th>
+                    Garantia
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+            <tr ng-repeat="producto in listaproductos">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+                <td>
+                    {{producto.Nombre}}
+                </td>
+                <td>
+                    {{producto.Precio_Venta}}
+                </td>
+                <td>
+                    {{producto.Descripcion}}
+                </td>
+                <td>
+                    {{producto.Precio_Compra}}
+                </td>
+                <td>
+                    {{producto.Fecha_Vencimiento}}
+                </td>
+                <td>
+                    {{producto.Garantia}}
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Producto }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Producto }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Producto })
+                </td>
+            </tr>
+            }
+        </table>
+    </div>
+</div>
+<!--
 <table class="table">
     <tr>
         <th>
@@ -62,6 +120,7 @@
     }
 
 </table>
+    -->
 <!--=====================================
        GALERIA
        ======================================-->

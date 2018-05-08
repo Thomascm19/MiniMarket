@@ -35,7 +35,8 @@
                     Contacto
                 </th>
             </tr>
-
+            @foreach (var item in Model)
+            {
             <tr ng-repeat="proveedor in listaproveedores">
 
                 <td>
@@ -56,7 +57,13 @@
                 <td>
                     {{proveedor.Contacto}}
                 </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo_Proveedor }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Codigo_Proveedor }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Codigo_Proveedor })
+                </td>
             </tr>
+            }
         </table>
     </div>
 </div>

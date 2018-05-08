@@ -32,21 +32,20 @@ clientes.controller("clientescontroller", function ($scope, listaclientes) {
 
     });
 });
+/* Datos Clientes   */
+var productos = angular.module('productos', ["ngSanitize"]);
 
-/*=============================================
-OBJETO CON LAS PROPIEDADES DEL SLIDE
-=============================================*/
+productos.factory("listaproductos", function ($http) {
+    var factoria = {};
+    factoria.listaproductos = function () {
+        return $http.get("http://localhost:61093/productoes/listaproductos");
+    }
+    return factoria; listaproductos
+});
 
-var p = {
+productos.controller("productoscontroller", function ($scope, listaproductos) {
+    listaproductos.listaproductos().success(function (datos) {
+        $scope.listaproductos = datos
 
-    paginacion: document.querySelectorAll("#paginacion li"),
-    item: 0,
-    cajaSlide: document.querySelector("#slide ul"),
-    animacionSlide: "slide",
-    imgSlide: document.querySelectorAll("#slide ul li"),
-    avanzar: document.querySelector("#slide #avanzar"),
-    retroceder: document.querySelector("#slide #retroceder"),
-    velocidadSlide: 3000,
-    formatearLoop: false
-}
-
+    });
+});
